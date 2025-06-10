@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Usuario</title>
-    <style>
-        .volver {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            padding: 10px 15px;
-            background-color: #ccc;
-            text-decoration: none;
-            border-radius: 5px;
-            color: black;
-        }
-        .volver:hover {
-            background-color: #aaa;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Buscar Usuario</title>
+  <style>
+    .volver {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      padding: 10px 15px;
+      background-color: #ccc;
+      border-radius: 5px;
+      text-decoration: none;
+      color: black;
+    }
+    .volver:hover {
+      background-color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <h1>Buscar Usuario</h1>
-    <p>Formulario de búsqueda.</p>
-    <a class="volver" href="INDEX.HTML">Volver al inicio</a>
+  <h1>Buscar Usuario</h1>
+  <form action="#" method="get">
+    <label for="usuario">Nombre de usuario:</label>
+    <input type="text" id="usuario" name="usuario">
+    <input type="submit" value="Buscar">
+  </form>
+  <a class="volver" href="index.html">Volver al inicio</a>
 </body>
 </html>
