@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>Página Personal</title>
   <style>
     body {
@@ -22,12 +24,80 @@
     h2 a:hover {
       text-decoration: underline;
     }
+
+    .login-box {
+      background: #b2ebf2;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      margin: 0 auto 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .login-box input {
+      width: 90%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #0288d1;
+      border-radius: 5px;
+    }
+
+    .login-box button {
+      width: 95%;
+      padding: 10px;
+      background: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #mensaje {
+      color: red;
+      margin-top: 10px;
+    }
+
+    #contenido {
+      display: none; /* se oculta hasta que se loguea */
+    }
   </style>
 </head>
 <body>
-  <h1>Índice</h1>
-  <h2><a href="presentacion.html">Presentación</a></h2>
-  <h2><a href="comidas.html">Comida Favorita</a></h2>
-  <h2><a href="amigos.html">Mis Amigos</a></h2>
+
+  <!-- Login -->
+  <div class="login-box" id="login">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Usuario" required><br>
+      <input type="password" id="password" placeholder="Contraseña" required><br>
+      <button type="submit">Ingresar</button>
+    </form>
+    <p id="mensaje"></p>
+  </div>
+
+  <!-- Contenido principal -->
+  <div id="contenido">
+    <h1>Índice</h1>
+    <h2><a href="presentacion.html">Presentación</a></h2>
+    <h2><a href="comidas.html">Comida Favorita</a></h2>
+    <h2><a href="amigos.html">Mis Amigos</a></h2>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if (user === 'admin' && pass === '1234') {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('contenido').style.display = 'block';
+      } else {
+        document.getElementById('mensaje').textContent = "Usuario o contraseña incorrectos.";
+      }
+    });
+  </script>
+
 </body>
 </html>
