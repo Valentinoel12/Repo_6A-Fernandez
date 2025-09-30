@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de ámbito de variables</title>
+    <script type="text/javascript">
+        var myVar = "global"; // Variable global
+
+        function checkscope() {
+            var myVar = "local"; // Variable local (oculta la global)
+            document.getElementById("resultado").innerHTML = myVar; // Muestra "local"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="checkscope()">Mostrar ámbito</button>
+    <p id="resultado"></p> <!-- Aquí aparecerá el resultado -->
+</body>
+</html>
