@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+    var a = 2;  // Binario: 10
+    var b = 3;  // Binario: 11
+    var linebreak = "<br />";
+    
+    // Operadores bit a bit
+    document.write("(a & b) => ");
+    var result = (a & b);  // AND bit a bit
+    document.write(result);
+    document.write(linebreak);
+    
+    document.write("(a | b) => ");
+    result = (a | b);  // OR bit a bit
+    document.write(result);
+    document.write(linebreak);
+    
+    document.write("(a ^ b) => ");
+    result = (a ^ b);  // XOR bit a bit
+    document.write(result);
+    document.write(linebreak);
+    
+    document.write("(~b) => ");
+    result = (~b);  // NOT bit a bit (complemento a 1)
+    document.write(result);
+    document.write(linebreak);
+    
+    document.write("(a << b) => ");
+    result = (a << b);  // Desplazamiento a izquierda
+    document.write(result);
+    document.write(linebreak);
+    
+    document.write("(a >> b) => ");
+    result = (a >> b);  // Desplazamiento a derecha (conserva signo)
+    document.write(result);
+    document.write(linebreak);
+</script>
+<p>Set the variables to different values and different operators and then try...</p>
+</body>
+</html>
