@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Función de Concatenación</title>
+    <script type="text/javascript">
+        function concatenate(first, last) {
+            var full;
+            full = first + " " + last;  // Agregué un espacio entre nombres
+            return full;
+        }
+        
+        function secondFunction() {
+            var result;
+            result = concatenate('Zara', 'Ali');
+            document.write(result);
+        }
+    </script>
+</head>
+<body>
+    <h1>Say Hello</h1>
+    <p>Click the following button to call the function</p>
+    <form>
+        <input type="button" onclick="secondFunction()" value="Call Function">
+    </form>
+    <p>Use different parameters inside the function and then try...</p>
+</body>
+</html>
